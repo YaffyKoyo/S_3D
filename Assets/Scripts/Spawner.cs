@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class Spawner : MonoBehaviour {
-
+	public bool devMode;
 	public Wave[] waves;
 	public Enemy enemy;
 
@@ -49,12 +49,22 @@ public class Spawner : MonoBehaviour {
 				campPositionOld = playerT.position;
 			}
 
-			if (enemiesRemainingToSpawn > 0 && Time.time > nextSpawnTime) {
+			if ((enemiesRemainingToSpawn > 0 || currentWave.infinite)&& Time.time > nextSpawnTime) {
 				enemiesRemainingToSpawn--;
 				nextSpawnTime = Time.time + currentWave.timeBetweenSpawn;
 
-				StartCoroutine (SpawnEnemy ());
+				StartCoroutine ("SpawnEnemy");
 
+			}
+		}
+
+		if (devMode) {
+			if (Input.GetKeyDown (KeyCode.Return)) {
+				StopCoroutine ("SpawnEnemy");
+				foreach (Enemy enemy in FindObjectsOfType<Enemy>()) {
+					GameObject.Destroy (enemy.gameObject);
+				}
+				NextWave ();
 			}
 		}
 	}
@@ -69,7 +79,7 @@ public class Spawner : MonoBehaviour {
 			spawnTile = map.GetTileFromPosition (playerT.position);
 		}
 		Material tileMat = spawnTile.GetComponent<Renderer> ().material;
-		Color initialColor = tileMat.color;
+		Color initialColor = Color.gray;
 		Color flashColor = Color.red;
 		float spawnTimer = 0;
 
@@ -82,10 +92,13 @@ public class Spawner : MonoBehaviour {
 
 		Enemy spawnedEnemy = Instantiate (enemy, spawnTile.position+Vector3.up, Quaternion.identity) as Enemy;
 		spawnedEnemy.OnDeath += OnEnemyDeath;
+		spawnedEnemy.SetCharacteristics (currentWave.moveSpeed, currentWave.hitsToKillPlayer, currentWave.enemyHealth, currentWave.skinColor);
 	}
 
 	void ResetPlayerPosition(){
-		playerT.position = map.GetTileFromPosition (Vector3.zero).position + Vector3.up;
+		if (playerT != null) {
+			playerT.position = map.GetTileFromPosition (Vector3.zero).position + Vector3.up;
+		}
 	}
 
 	void OnPlayerDeath(){
@@ -116,8 +129,14 @@ public class Spawner : MonoBehaviour {
 
 	[System.Serializable]
 	public class Wave{
+		public bool infinite;
 		public int enemyCount;
 		public float timeBetweenSpawn;
+
+		public float moveSpeed;
+		public float enemyHealth;
+		public int hitsToKillPlayer;
+		public Color skinColor;
 	}
 
 }

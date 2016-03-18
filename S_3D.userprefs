@@ -1,10 +1,15 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\AudioManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Spawner.cs">
     <Files>
-      <File FileName="Assets\Scripts\AudioManager.cs" Line="6" Column="32" />
-      <File FileName="Assets\Scripts\MusicManager.cs" Line="19" Column="1" />
+      <File FileName="Assets\Scripts\MusicManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\AudioManager.cs" Line="95" Column="3" />
       <File FileName="Assets\Scripts\Gun.cs" Line="58" Column="2" />
+      <File FileName="Assets\Scripts\SoundLibrary.cs" Line="9" Column="60" />
+      <File FileName="Assets\Scripts\Enemy.cs" Line="97" Column="5" />
+      <File FileName="Assets\Scripts\Spawner.cs" Line="118" Column="55" />
+      <File FileName="Assets\Scripts\LivingEntity.cs" Line="30" Column="16" />
+      <File FileName="Assets\Scripts\Player.cs" Line="62" Column="34" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

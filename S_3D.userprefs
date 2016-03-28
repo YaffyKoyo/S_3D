@@ -1,28 +1,8 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Spawner.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\GameUI.cs">
     <Files>
-<<<<<<< HEAD
-      <File FileName="Assets\Scripts\ScoreKeeper.cs" Line="29" Column="39" />
-      <File FileName="Assets\Scripts\AudioManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Menu.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\GameUI.cs" Line="75" Column="53" />
-      <File FileName="Assets\Scripts\MusicManager.cs" Line="25" Column="25" />
-      <File FileName="Assets\Scripts\SoundLibrary.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Enemy.cs" Line="57" Column="35" />
-      <File FileName="Assets\Scripts\LivingEntity.cs" Line="6" Column="30" />
-      <File FileName="Assets\Scripts\Player.cs" Line="64" Column="38" />
-      <File FileName="Assets\Scripts\MapGenerator.cs" Line="191" Column="23" />
-=======
-      <File FileName="Assets\Scripts\MusicManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\AudioManager.cs" Line="95" Column="3" />
-      <File FileName="Assets\Scripts\Gun.cs" Line="58" Column="2" />
-      <File FileName="Assets\Scripts\SoundLibrary.cs" Line="9" Column="60" />
-      <File FileName="Assets\Scripts\Enemy.cs" Line="97" Column="5" />
-      <File FileName="Assets\Scripts\Spawner.cs" Line="118" Column="55" />
-      <File FileName="Assets\Scripts\LivingEntity.cs" Line="30" Column="16" />
-      <File FileName="Assets\Scripts\Player.cs" Line="62" Column="34" />
->>>>>>> parent of ae8940b... e24
+      <File FileName="Assets\Scripts\GameUI.cs" Line="99" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
